@@ -12,6 +12,7 @@ import com.example.cookingguide.R
 import com.example.cookingguide.base.BaseFragmentWithBinding
 import com.example.cookingguide.databinding.FragmentSendBinding
 import com.example.cookingguide.model.SeenModel
+import com.example.cookingguide.ui.MainApp
 import com.example.cookingguide.ui.inapp.PurchaseInAppActivity
 import com.example.cookingguide.ui.lookup.FragmentLookUp
 import com.example.cookingguide.utils.Common
@@ -45,9 +46,14 @@ class FragmentSend : BaseFragmentWithBinding<FragmentSendBinding>(
     }
 
     override fun initData() {
+        getCoin()
         handleNotData(viewModel.getDataSeen())
         mAdapter.submitList(viewModel.getDataSeen())
         mListSend.addAll(viewModel.getDataSeen())
+
+    }
+    fun getCoin() {
+        binding.coin.text = MainApp.getInstant()?.preference?.getValueCoin().toString()
     }
 
     private fun handleNotData(listData: ArrayList<SeenModel>) {
