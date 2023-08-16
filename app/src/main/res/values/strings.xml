@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Công Thức nấu ăn</string>
+
+    <string name="image_title">https://www.themealdb.com/images/category/lamb.png</string>
+    <string name="text_title">Thể loại ẩm thực</string>
+    <string name="message_title">Thực đơn dễ làm</string>
+    <string name="message_purchase_one">%s</string>
+</resources>

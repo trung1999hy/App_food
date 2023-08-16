@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/Pink"
+    android:elevation="0dp"
+    app:cardElevation="0dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="0dp"
+            android:backgroundTint="@color/Pink"
+            app:cardCornerRadius="15dp"
+            android:id="@+id/cardImageSeen">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_item_seen"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_item_seen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@id/cardImageSeen"
+            android:layout_marginStart="20dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/Purple5"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
